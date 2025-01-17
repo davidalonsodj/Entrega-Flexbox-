@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #007bff;
+  --primary-color: #304A53;
   --secondary-color: #f8f9fa;
   --text-color: #343a40;
   --font-family: 'Arial', sans-serif;
@@ -24,36 +24,43 @@
   }
   
   /* Header */
-  .header {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 20px 0;
-  }
-  
-  .header .logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav {
+    padding: 20px;
+}
+
+.site-logo {
+    flex: 0 0 auto;
+}
+
+.site-logo img {
+    height: 50px;
+}
+
+.navigation {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .nav-list {
+}
+
+.nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
-  
-  .nav-list li a {
+    margin: 0;
+}
+
+.nav-menu li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-  }
-  
-  .cta-button {
+}
+
+.btn-primary {
     padding: 10px 20px;
     background-color: white;
     color: var(--primary-color);
@@ -61,13 +68,26 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    border: #007bff;
-    
-  }
-  
-  .cta-button:hover {
-    background-color:red;
-  }
+}
+
+.btn-primary:hover {
+    background-color: red;
+}
+
+.site-header .navigation {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .navigation .nav-menu {
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.site-header .navigation .btn-primary {
+    margin-left: auto;
+}
   
   /* Hero */
   .hero {
@@ -76,7 +96,7 @@
     align-items: center;
     justify-content: center;
     padding: 50px 0;
-    background-image:url('/assets/boragradients-gritty-16.png');
+    
   
    
   }
@@ -151,8 +171,8 @@
     font-size: 16px;
   }
   
-  /* Footer */
- /* Footer */
+ 
+/* Footer */
 .site-footer {
   background-color: var(--primary-color);
   color: white;
@@ -201,6 +221,9 @@
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+
+/*responsive*/
+
 
 @media (max-width: 768px) {
   .hero-content {
