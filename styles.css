@@ -88,6 +88,14 @@
 .site-header .navigation .btn-primary {
     margin-left: auto;
 }
+.menu{
+display: none;
+width: 30px;
+heigt:30px;
+}
+
+
+
   
   /* Hero */
   .hero {
@@ -117,6 +125,7 @@
   .hero-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: white;   
   }
   
   .hero-text p {
@@ -138,6 +147,7 @@
     padding: 50px 0;
     text-align: center;
     height: 50svh;
+    background-color: #304A53;
   }
   
   .services h3 {
@@ -223,9 +233,17 @@
 }
 
 /*responsive*/
+@media (max-width: 780px) {
+  header > nav{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+}
 
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .hero-content {
     flex-direction: column;
   }
@@ -251,7 +269,7 @@
 
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     .hero-content {
       flex-direction: column;
     }
@@ -270,3 +288,4 @@
     }
   }
  
+  
